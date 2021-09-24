@@ -28,16 +28,16 @@ body {
   background-color: var(--color-four);
   font-family: "Manrope", sans-serif;
 }
-
+/*CSS - Main page*/
 .main-page {
   position: relative;
   top: 50vh;
   left: 50vw;
   transform: translate(-50%, -50%);
 
-  padding: 0 4rem;
+  padding: 0 6rem;
 }
-
+/*CSS - Component*/
 .article-preview {
   background-color: #ffffff;
 
@@ -52,6 +52,7 @@ body {
 
   border-radius: 1rem;
 }
+/*CSS - First element*/
 .article-preview__box-image {
   flex-basis: 40%;
 
@@ -64,17 +65,15 @@ body {
 
   border-radius: 1rem 0 0 1rem;
 }
-/**/
+/*CSS - Second element*/
 .article-preview__box-article {
   flex-basis: 60%;
 
   display: flex;
   flex-direction: column;
 }
-/**/
+/*CSS - Text section*/
 .article-preview__box-text {
-  width: 100%;
-
   padding: 0 4rem;
 }
 .article-preview__tittle {
@@ -90,19 +89,16 @@ body {
 
   margin-bottom: 3rem;
 }
-/*-*/
+/*CSS - Author section*/
 .article-preview__box-author {
   position: relative;
+
   padding: 0 4rem;
 }
 .author-article {
   display: flex;
-}
-.author-article__info {
-  display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  flex-basis: 80%;
 }
 .author-article__image {
   display: inline-block;
@@ -112,6 +108,7 @@ body {
   border-radius: 100%;
 }
 .author-article__box-data {
+  flex-basis: 70%;
   margin-left: 1.6rem;
 }
 .author-article__name {
@@ -126,18 +123,8 @@ body {
   display: block;
   font-size: 1.6rem;
 }
-.author-article__social-networks {
-  flex-basis: 20%;
-
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-
-  margin-right: 2rem;
-}
 .author-article__btn-social {
   background-color: var(--color-four);
-
   padding: 1.1rem 1.2rem;
 
   border: 0;
@@ -158,38 +145,40 @@ body {
   position: absolute;
 
   display: flex;
+  justify-content: center;
   align-items: center;
 
-  bottom: 79px;
-  right: -46px;
+  bottom: 7.9rem;
+  right: -4.6rem;
 
-  box-shadow: 0 6px 14px 0 hsla(213, 30%, 7%, 0.25);
+  box-shadow: 0 0.6rem 1.4rem 0 hsla(213, 30%, 7%, 0.25);
 
-  padding: 18px 40px;
-  border-radius: 10px;
+  padding: 1.8rem 4rem;
+  border-radius: 1rem;
   z-index: 100;
 }
 .social-networks__text {
   text-transform: uppercase;
   color: var(--color-three);
-  font-size: 13px;
+  font-size: 1.3rem;
   font-weight: 500;
-  letter-spacing: 5px;
+  letter-spacing: 0.5rem;
 
-  margin-right: 26px;
+  margin-right: 2.6rem;
 }
 .social-networks__image--margin {
-  margin-right: 24px;
+  margin-right: 2.4rem;
 }
 .social-networks__start-option {
-  position: absolute;
-  width: 40px;
-  height: 20px;
   background-color: var(--color-one);
+  position: absolute;
+  width: 4rem;
+  height: 2rem;
 
   clip-path: polygon(50% 100%, 0 0, 100% 0);
-  transform: translate(240%, 180%);
 
+  bottom: -1.6rem;
+  right: 11.2rem;
   z-index: 200;
 }
 @media screen and (max-width: 950px) {
@@ -201,19 +190,18 @@ body {
   html {
     font-size: 62.5%;
   }
-  .article-preview__box-author {
-    padding: 1.8rem 3.7rem;
-  }
+  /*CSS - Component*/
   .article-preview {
     flex-direction: column;
 
-    max-width: 350px;
+    min-width: 260px;
   }
+  /*CSS - First element*/
   .article-preview__box-image {
-    width: 100%;
     flex-basis: none;
 
     max-height: 216px;
+
     border-radius: 1rem 1rem 0 0;
   }
   .article-preview__image {
@@ -224,38 +212,39 @@ body {
 
     border-radius: 1rem 1rem 0 0;
   }
+  /*CSS - Second element*/
+  .article-preview__box-author {
+    padding: 1.8rem 4rem;
+  }
   .article-preview__box-text {
     position: relative;
 
+    padding: 0 3.6rem;
+    padding-top: 4rem;
+
     width: 100%;
     flex-basis: none;
-
-    padding: 3.7rem;
-    padding-bottom: 0;
   }
   .article-preview__tittle {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
   }
   .article-preview__text {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
 
     margin-bottom: 1rem;
   }
   .author-article__image {
-    max-width: 4rem;
+    max-width: 4.5rem;
   }
   .author-article__name {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
   .author-article__date {
-    font-size: 1.4rem;
-  }
-  .author-article__social-networks {
-    margin-right: 0;
+    font-size: 1.5rem;
   }
   /**/
   .author-article__btn-social {
-    padding: 0.6rem 0.7rem;
+    padding: 0.8rem 0.9rem;
   }
   .author-article__icon {
     transform: scale(0.96);
@@ -267,12 +256,13 @@ body {
   }
   .social-networks {
     width: 100%;
-    transform: translate(0, 0);
 
     bottom: 0;
     left: 0;
 
-    padding: 25px 40px;
+    padding: 2.4rem 4.3rem;
+
+    justify-content: flex-start;
 
     border-radius: 0 0 10px 10px;
   }
@@ -304,5 +294,8 @@ body {
 @media screen and (max-width: 300px) {
   html {
     font-size: 50%;
+  }
+  .main-page {
+    padding: 0.5rem;
   }
 }

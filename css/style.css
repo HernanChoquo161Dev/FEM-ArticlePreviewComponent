@@ -41,7 +41,7 @@ body {
 .article-preview {
   background-color: #ffffff;
 
-  max-width: 91rem;
+  max-width: 73rem;
   width: 100%;
 
   display: flex;
@@ -78,14 +78,14 @@ body {
 }
 .article-preview__tittle {
   color: var(--color-one);
-  font-size: 2.6rem;
+  font-size: 2rem;
   font-weight: 700;
 
   margin-bottom: 1.6rem;
 }
 .article-preview__text {
   color: var(--color-two);
-  font-size: 1.6rem;
+  font-size: 1.3rem;
 
   margin-bottom: 3rem;
 }
@@ -95,6 +95,7 @@ body {
 
   padding: 0 4rem;
 }
+/*CSS - First block*/
 .author-article {
   display: flex;
   justify-content: space-between;
@@ -102,42 +103,51 @@ body {
 }
 .author-article__image {
   display: inline-block;
-  max-width: 4.6rem;
+  max-width: 4.2rem;
   height: auto;
+
+  margin-right: 1rem;
 
   border-radius: 100%;
 }
 .author-article__box-data {
   flex-basis: 70%;
-  margin-left: 1.6rem;
 }
 .author-article__name {
   color: var(--color-one);
 
   display: block;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
 }
 .author-article__date {
   color: var(--color-three);
 
   display: block;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
 }
 .author-article__btn-social {
   background-color: var(--color-four);
-  padding: 1.1rem 1.2rem;
+  padding: 0.8rem 0.9rem;
 
   border: 0;
   border-radius: 100%;
+
+  transition-duration: 0.4s;
+}
+.author-article__btn-social--color {
+  background-color: var(--color-two);
 }
 .author-article__icon {
   position: relative;
-  transform: scale(1.1);
   filter: invert(51%) sepia(20%) saturate(471%) hue-rotate(175deg)
     brightness(93%) contrast(87%);
 
-  top: 0.1rem;
+  transition-duration: 0.4s;
 }
+.author-article__icon--color {
+  filter: none;
+}
+/*CSS - Second block*/
 .social-networks {
   visibility: hidden;
 
@@ -148,26 +158,26 @@ body {
   justify-content: center;
   align-items: center;
 
-  bottom: 7.9rem;
-  right: -4.6rem;
+  bottom: 7.1rem;
+  right: -7.4rem;
 
   box-shadow: 0 0.6rem 1.4rem 0 hsla(213, 30%, 7%, 0.25);
 
-  padding: 1.8rem 4rem;
+  padding: 1.6rem 3.6rem;
   border-radius: 1rem;
   z-index: 100;
 }
 .social-networks__text {
   text-transform: uppercase;
   color: var(--color-three);
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: 0.5rem;
 
-  margin-right: 2.6rem;
+  margin-right: 1.6rem;
 }
 .social-networks__image--margin {
-  margin-right: 2.4rem;
+  margin-right: 2rem;
 }
 .social-networks__start-option {
   background-color: var(--color-one);
@@ -183,7 +193,7 @@ body {
 }
 @media screen and (max-width: 950px) {
   html {
-    font-size: 50%;
+    font-size: 58%;
   }
 }
 @media screen and (max-width: 770px) {
@@ -199,7 +209,6 @@ body {
   /*CSS - First element*/
   .article-preview__box-image {
     flex-basis: none;
-
     max-height: 216px;
 
     border-radius: 1rem 1rem 0 0;
@@ -212,10 +221,7 @@ body {
 
     border-radius: 1rem 1rem 0 0;
   }
-  /*CSS - Second element*/
-  .article-preview__box-author {
-    padding: 1.8rem 4rem;
-  }
+  /*CSS - Text section*/
   .article-preview__box-text {
     position: relative;
 
@@ -233,6 +239,11 @@ body {
 
     margin-bottom: 1rem;
   }
+  /*CSS - Author section*/
+  .article-preview__box-author {
+    padding: 1.8rem 4rem;
+  }
+  /*CSS - First block*/
   .author-article__image {
     max-width: 4.5rem;
   }
@@ -242,7 +253,6 @@ body {
   .author-article__date {
     font-size: 1.5rem;
   }
-  /**/
   .author-article__btn-social {
     padding: 0.8rem 0.9rem;
   }
@@ -254,6 +264,7 @@ body {
   .social-networks__start-option {
     display: none;
   }
+  /*CSS - Second block*/
   .social-networks {
     width: 100%;
 
@@ -291,11 +302,21 @@ body {
     margin-top: 1rem;
   }
 }
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 49.2%;
+  }
+}
 @media screen and (max-width: 300px) {
   html {
     font-size: 50%;
   }
   .main-page {
     padding: 0.5rem;
+  }
+}
+@media screen and (max-width: 280px) {
+  html {
+    font-size: 46.4%;
   }
 }

@@ -13,12 +13,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-/*CSS - Reusable code*/
-.flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 /**CSS - root**/
 html {
   font-size: 62.5%;
